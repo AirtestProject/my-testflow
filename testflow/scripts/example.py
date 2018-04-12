@@ -8,7 +8,7 @@ from airtest.core.api import install, start_app
 class TestCalculatorPlus(AndroidAppCase):
     def setUp(self):
         assets_mgr = self.get_assets_manager()
-        print assets_mgr
+        print(assets_mgr)
         apk_path = assets_mgr.get_abspath('res/app/com.google.android.calculator.apk')
         install(apk_path)
         start_app('com.google.android.calculator')

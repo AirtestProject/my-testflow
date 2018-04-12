@@ -2,16 +2,13 @@
 
 import os
 import sys
+import inspect
 from setuptools import setup, find_packages
 from pip.req import parse_requirements
 
-current_frame = sys._getframe(0)
-caller = current_frame.f_back
-this_filename = caller.f_code.co_filename
-this_dir = os.path.abspath(os.path.join(this_filename, '..'))
-project_name = os.path.basename(this_dir)
-print('project name is {}'.format(project_name))
-
+project_name = find_packages()[0]
+if '.' in project_name:
+    project_name = project_name.split('.', 1)[0]
 
 if os.path.exists('requirements.txt'):
     # parse_requirements() returns generator of pip.req.InstallRequirement objects
@@ -23,7 +20,7 @@ else:
     reqs = []
 
 setup(
-    name=project_name,
+    name='testflow_' + project_name,
     version='1.0.0',
     description='A test automation project using poco and pocounit.',
     packages=find_packages(),
