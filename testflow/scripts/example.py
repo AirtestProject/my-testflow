@@ -2,15 +2,14 @@
 
 import time
 
-# TODO: "from testflow.lib" should rename according to your actual package name
+# TODO: "from testflow.lib" should be renamed according to your actual package name
 from testflow.lib.case.android_app import AndroidAppCase
 from airtest.core.api import install, start_app
 
 
-class TestCalculatorPlus(AndroidAppCase):
+class CalculatorPlus(AndroidAppCase):
     def setUp(self):
         assets_mgr = self.get_assets_manager()
-        print(assets_mgr)
         apk_path = assets_mgr.get_abspath('res/app/com.google.android.calculator.apk')
         install(apk_path)
         start_app('com.google.android.calculator')
