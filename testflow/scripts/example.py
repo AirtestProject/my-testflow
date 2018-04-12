@@ -1,7 +1,9 @@
 # coding=utf-8
 
 import time
-from lib.case.android_app import AndroidAppCase
+
+# TODO: "from testflow.lib" should rename according to your actual package name
+from testflow.lib.case.android_app import AndroidAppCase
 from airtest.core.api import install, start_app
 
 
