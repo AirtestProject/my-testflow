@@ -17,7 +17,7 @@ class AndroidAppCase(PocoTestCase):
         if not current_device():
             connect_device('Android:///')
 
-        cls.poco = AndroidUiautomationPoco()
+        cls.poco = AndroidUiautomationPoco(screenshot_each_action=False)
 
         action_tracker = ActionTracker(cls.poco)
         cls.register_addon(action_tracker)
