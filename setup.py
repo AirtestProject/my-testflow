@@ -1,27 +1,27 @@
 # coding=utf-8
 
 import os
-import sys
-import inspect
 from setuptools import setup, find_packages
-from pip.req import parse_requirements
+
+
+def parse_requirements(filename='requirements.txt'):
+    """ load requirements from a pip requirements file. (replacing from pip.req import parse_requirements)"""
+    lineiter = (line.strip() for line in open(filename))
+    return [line for line in lineiter if line and not line.startswith("#")]
+
 
 project_name = find_packages()[0]
 if '.' in project_name:
     project_name = project_name.split('.', 1)[0]
 
 if os.path.exists('requirements.txt'):
-    # parse_requirements() returns generator of pip.req.InstallRequirement objects
-    install_reqs = parse_requirements('requirements.txt', session=False)
-
-    # reqs is a list of requirement
-    reqs = [str(ir.req) for ir in install_reqs if ir.req]
+    reqs = parse_requirements()
 else:
     reqs = []
 
 setup(
     name='testflow_' + project_name,
-    version='1.0.0',
+    version='1.0.1',
     description='A test automation project using poco and pocounit.',
     packages=find_packages(),
     include_package_data=True,
