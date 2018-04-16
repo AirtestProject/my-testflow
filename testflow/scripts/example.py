@@ -24,7 +24,7 @@ class CalculatorPlus(AndroidAppCase):
         self.poco('com.google.android.calculator:id/digit_1').click()
         self.poco('com.google.android.calculator:id/eq').click()
         time.sleep(1)
-        result = self.poco('com.google.android.calculator:id/result').get_text()
+        result = self.poco('com.google.android.calculator:id/formula').get_text()
         self.assertEqual(result, '2', '1+1=2 ^^')
 
     def tearDown(self):
