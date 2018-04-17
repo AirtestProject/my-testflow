@@ -8,6 +8,7 @@ Clone this repo and run following command. (You'd better install it with the ``-
 
 .. code-block:: bash
     
+    git clone git@github.com:AirtestProject/my-testflow.git
     pip install -e my-testflow
 
 Structure
