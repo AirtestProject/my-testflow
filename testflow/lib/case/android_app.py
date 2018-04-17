@@ -1,8 +1,5 @@
 # coding=utf-8
 
-import os
-import sys
-
 from pocounit.case import PocoTestCase
 from pocounit.addons.poco.action_tracking import ActionTracker
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
