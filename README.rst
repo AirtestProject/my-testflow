@@ -4,15 +4,23 @@ Test automation standard engineering project template
 How to use?
 -----------
 
-Clone this repo and run following command. (You'd better install it with the ``-e`` flag.)
+**1.** Clone this repo and run following command. (You'd better install it with the ``-e`` flag.)
 
 .. code-block:: bash
     
     git clone git@github.com:AirtestProject/my-testflow.git
     pip install -e my-testflow
 
-Structure
----------
+**2.** Run the example script after installation.
+
+.. code-block:: bash
+
+    python testflow/scripts/example.py
+
+**3.** Check the test results in ``pocounit-results/`` with `TestResultPlayer`_.
+
+Project structure
+-----------------
 
 .. code-block:: text
 
@@ -40,8 +48,8 @@ How to get the test results?
 
 Use our `TestResultPlayer`_ to replay the whole procedure of your tests!
 
-More
-----
+More info
+---------
 
 This template is designed for engineering test flow and it works along with following frameworks.
 You can take a look at the API reference according to each framework.
