@@ -5,6 +5,7 @@ from pocounit.addons.poco.action_tracking import ActionTracker
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 
 from airtest.core.api import connect_device, device as current_device
+from airtest.core.helper import device_platform
 
 
 class AndroidAppCase(PocoTestCase):
@@ -16,7 +17,8 @@ class AndroidAppCase(PocoTestCase):
 
         dev = current_device()
         meta_info_emitter = cls.get_result_emitter('metaInfo')
-        meta_info_emitter.snapshot_device_info(dev.serialno, dev.adb.get_device_info())
+        if device_platform() == 'Android':
+            meta_info_emitter.snapshot_device_info(dev.serialno, dev.adb.get_device_info())
 
         cls.poco = AndroidUiautomationPoco(screenshot_each_action=False)
 

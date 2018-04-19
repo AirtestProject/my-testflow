@@ -4,7 +4,7 @@ Test automation standard engineering project template
 How to use?
 -----------
 
-**1.** Clone this repo and run following command. (You'd better install it with the ``-e`` flag.)
+**1.** Clone this repo and run the following command. (Installing with ``-e`` flag is strongly recommended.)
 
 .. code-block:: bash
     
