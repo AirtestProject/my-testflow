@@ -4,9 +4,10 @@ import time
 
 # TODO: "from testflow.lib" should be renamed according to your actual package name
 from testflow.lib.case.android_app import AndroidAppCase
+from testflow.lib.utils.installation import install_android_app
 from pocounit.suite import PocoTestSuite
 from airtest.core.api import device as current_device, connect_device
-from airtest.core.api import install, start_app, stop_app
+from airtest.core.api import start_app, stop_app
 
 
 class CalculatorSuite(PocoTestSuite):
@@ -16,7 +17,7 @@ class CalculatorSuite(PocoTestSuite):
 
         self.package_name = 'com.google.android.calculator'
         apk_path = self.R('res/app/com.google.android.calculator.apk')
-        install(apk_path)
+        install_android_app(current_device().adb, apk_path)
         start_app(self.package_name)
 
     def tearDown(self):

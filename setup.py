@@ -21,7 +21,7 @@ else:
 
 setup(
     name='testflow_' + project_name,
-    version='1.0.1',
+    version='1.0.2',
     description='A test automation project using poco and pocounit.',
     packages=find_packages(),
     include_package_data=True,

@@ -4,14 +4,16 @@ import time
 
 # TODO: "from testflow.lib" should be renamed according to your actual package name
 from testflow.lib.case.android_app import AndroidAppCase
-from airtest.core.api import install, start_app, stop_app, Template, exists
+from testflow.lib.utils.installation import install_android_app
+from airtest.core.api import start_app, stop_app, Template, exists
+from airtest.core.api import device as current_device
 
 
 class CalculatorPlus(AndroidAppCase):
     def setUp(self):
         self.package_name = 'com.google.android.calculator'
         apk_path = self.R('res/app/com.google.android.calculator.apk')
-        install(apk_path)
+        install_android_app(current_device().adb, apk_path)
         start_app(self.package_name)
 
     def runTest(self):
