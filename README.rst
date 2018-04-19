@@ -8,7 +8,7 @@ How to use?
 
 .. code-block:: bash
     
-    git clone git@github.com:AirtestProject/my-testflow.git
+    git clone https://github.com/AirtestProject/my-testflow.git
     pip install -e my-testflow
 
 **2.** Run the example script after installation.
