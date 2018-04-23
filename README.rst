@@ -1,5 +1,10 @@
-Test automation standard engineering project template
-=====================================================
+
+.. image:: doc/img/logo-simple-my-testflow.png
+
+my-testflow
+===========
+
+**Test automation standard engineering project template**
 
 How to use?
 -----------
