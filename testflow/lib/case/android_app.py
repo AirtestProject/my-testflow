@@ -15,10 +15,10 @@ class AndroidAppCase(PocoTestCase):
         if not current_device():
             connect_device('Android:///')
 
-        # dev = current_device()
-        # meta_info_emitter = cls.get_result_emitter('metaInfo')
-        # if device_platform() == 'Android':
-        #     meta_info_emitter.snapshot_device_info(dev.serialno, dev.adb.get_device_info())
+        dev = current_device()
+        meta_info_emitter = cls.get_result_emitter('metaInfo')
+        if device_platform() == 'Android':
+            meta_info_emitter.snapshot_device_info(dev.serialno, dev.adb.get_device_info())
 
         cls.poco = AndroidUiautomationPoco(screenshot_each_action=False)
 

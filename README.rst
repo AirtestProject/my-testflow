@@ -4,7 +4,7 @@
 my-testflow
 ===========
 
-**Test automation standard engineering project template**
+**Test automation standard engineering project template**. More and more features to be added in future.
 
 How to use?
 -----------
