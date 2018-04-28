@@ -10,6 +10,18 @@ from airtest.core.api import device as current_device
 
 
 class CalculatorPlus(AndroidAppCase):
+    @classmethod
+    def name(cls):
+        return 'CalculatorPlus (customized name)'
+
+    @classmethod
+    def getMetaInfo(cls):
+        return {
+            "author": 'author name',
+            "remark": 'any data',
+            'any-keys': 'any-values',
+        }
+
     def setUp(self):
         self.package_name = 'com.google.android.calculator'
         apk_path = self.R('res/app/com.google.android.calculator.apk')
