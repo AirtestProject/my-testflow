@@ -2,6 +2,7 @@
 
 from pocounit.case import PocoTestCase
 from pocounit.addons.poco.action_tracking import ActionTracker
+from pocounit.addons.poco.capturing import SiteCapturer
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 
 from airtest.core.api import connect_device, device as current_device
@@ -24,3 +25,5 @@ class AndroidAppCase(PocoTestCase):
 
         action_tracker = ActionTracker(cls.poco)
         cls.register_addon(action_tracker)
+        cls.site_capturer = SiteCapturer(cls.poco)
+        cls.register_addon(cls.site_capturer)

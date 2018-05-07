@@ -39,6 +39,7 @@ class CalculatorPlus(AndroidAppCase):
         self.poco('com.google.android.calculator:id/eq').click()
         time.sleep(1)
         result = self.poco('com.google.android.calculator:id/formula').get_text()
+        self.site_capturer.snapshot('check-point-1')
         self.assertEqual(result, '2', '1+1=2 ^^')
 
     def tearDown(self):
