@@ -70,3 +70,15 @@ You can take a look at the API reference according to each framework.
 .. _airtest: http://airtest.readthedocs.io
 .. _poco: http://poco.readthedocs.io
 .. _pocounit: https://github.com/AirtestProject/PocoUnit
+
+Join to discuss!
+----------------
+
+|chat on slack|
+
+.. image:: doc/img/discussion-qq-qr.png
+
+.. |chat on slack| image:: doc/img/chat_on_slack.png
+    :alt: chat on slack
+    :scale: 100%
+    :target: https://join.slack.com/t/airtestproject/shared_invite/enQtMzYwMjc2NjQzNDkzLTcyMmJlNjgyNjgzZTRkNWRiYmE1YWI1ZWE5ZmQwYmM1YmY3ODZlMDc0YjkwMTQ5NDYxYmEyZWU1ZTFlZjg3ZjI
